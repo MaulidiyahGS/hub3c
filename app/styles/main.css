@@ -117,8 +117,12 @@ nav .menus .menu:hover {
     border-bottom: solid 1px #ffffff;
   }
 }
+nav .menus .menu.close {
+  display: none;
+}
 @media (max-width: 767px) {
   nav .menus .menu.close {
+    display: block;
     border: none;
   }
 }
@@ -207,6 +211,7 @@ footer .content .right .menus .menu {
   display: inline-block;
   margin-left: 30px;
   cursor: pointer;
+  text-decoration: none;
 }
 footer .content .right .menus .menu:hover {
   color: #00aeef;
@@ -246,25 +251,30 @@ section {
   position: relative;
   display: block;
 }
-section.main-one {
+section.one {
   height: 800px;
-  background-image: url('../images/main-slider-background.png');
   background-size: cover;
   background-color: #b7bec2;
   background-attachment: fixed;
 }
-section.main-one p {
+section.one p {
   font-size: 22px;
 }
 @media (max-width: 320px) {
-  section.main-one p {
+  section.one p {
     font-size: 14px;
   }
 }
 @media (max-width: 480px) {
-  section.main-one {
+  section.one {
     height: 100vh;
   }
+}
+section.main {
+  background-image: url('../images/main-slider-background.png');
+}
+section.app {
+  background-image: url('../images/app-background-one.png');
 }
 section.main-two {
   height: 218px;
@@ -493,6 +503,9 @@ p {
   p {
     font-size: 14px;
   }
+}
+.text-orange {
+  color: #ffa715 !important;
 }
 .text-greyDark {
   color: #47555e !important;

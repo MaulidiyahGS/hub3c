@@ -3,9 +3,8 @@ section{
 	position: relative;
 	display: block;
 
-	&.main-one{
-		height: 800px;
-		background-image : url('../images/main-slider-background.png');
+	&.one{
+		height: 800px;		
 		background-size: cover;
 		background-color: @greyLight;
 		background-attachment: fixed;
@@ -19,6 +18,12 @@ section{
 		@media (max-width: @xsmall){
 			height: 100vh;
 		}
+	}
+	&.main{
+		background-image : url('../images/main-slider-background.png');
+	}
+	&.app{
+		background-image : url('../images/app-background-one.png');
 	}
 	&.main-two{
 		height: 218px;

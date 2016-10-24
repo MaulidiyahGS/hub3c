@@ -1,15 +1,12 @@
 <nav scroll ng-class="{'scrolled' : boolChangeClass}">
     <div class="background">&nbsp;</div>
-    <div class="logo">&nbsp;</div>
+    <div class="logo" ui-sref="landing.home">&nbsp;</div>
     <div class="toggle" ng-click="changeMenu()">
         <i class="icon icon-th-menu"></i>
     </div>
     <div class="menus" ng-class="{'show-menu' : showMenuMobile}">
         <div class="menu close text-right" ng-click="changeMenu()"><b>x</b> Close</div>
-        <div class="menu active">hub3c</div>
-        <div class="menu">Apps</div>
-        <div class="menu">Global Partner Program</div>
-        <div class="menu">About us</div>
+        <div class="menu" ng-repeat="m in menus" ui-sref="{{m.state}}" ui-sref-active="active">{{m.text}}</div>
     </div>
 </nav>
 <div ui-view></div>
@@ -23,10 +20,7 @@
         </div>
         <div class="right">
             <div class="menus">
-                <a class="menu active">hub3c</a>
-                <a class="menu">Apps</a>
-                <a class="menu">Global Partner Program</a>
-                <a class="menu">About us</a>
+                <a class="menu" ng-repeat="m in menus" ui-sref="{{m.state}}" ui-sref-active="active">{{m.text}}</a>
             </div>
         </div>
     </div>
