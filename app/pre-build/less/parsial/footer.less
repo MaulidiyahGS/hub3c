@@ -1,0 +1,55 @@
+footer{
+	height: 226px;
+	background: @dark;
+	padding-top: 50px;
+	padding-bottom: 40px;
+
+	.content{
+		clear: both;
+		width: 1000px;
+		margin: auto;
+		color: @light;		
+
+		div{
+			width: 50%;
+			display: inline-block;
+		}
+		.left{
+			float: left;
+			.logo{
+				background-image : url('../images/logo.png');
+				background-repeat: no-repeat;
+				width: 152px;
+				height: 36px;
+				margin-bottom: 20px;
+			}
+		}
+		.right{
+			float: right;
+			text-align: right;
+			.menus{
+				width: 100%;				
+				.menu{
+					font-size: 16px;
+					color: @light;
+					display: inline-block;
+					margin-left: 30px;
+					cursor: pointer;
+
+					&:hover{
+						color: @blue;
+					}
+				}
+			}
+		}
+		p{
+			font-size: 14px;
+		}
+		.active{
+			color: @grey !important;
+		}
+		a{
+			color: @blue;
+		}
+	}
+}

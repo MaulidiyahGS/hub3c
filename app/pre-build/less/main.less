@@ -1,0 +1,46 @@
+
+@blue : #00aeef;
+@green : #88c642;
+@orange : #ffa715;
+@greyDark : #47555e;
+@grey : #8c969d;
+@greyLight : #b7bec2;
+@greyLighter : #d8d8d8;
+@dark : #000;
+@light: #fff;
+
+@xxsmall : 320px;
+@xsmall : 480px;
+@small : 768px;
+@medium: 920px;
+@large: 1200px;
+@xlarge: 1920px;
+
+*{
+	box-sizing: border-box;
+}
+::selection{
+    background : @blue;
+    color: @light;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Regular.ttf');
+}
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('../fonts/Lato-Bold.ttf');
+}
+body{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	font-family : 'Lato';
+    color: @light;
+}
+
+@import 'parsial/nav.less';
+@import 'parsial/footer.less';
+@import 'parsial/section.less';
+@import 'parsial/button.less';
+@import 'parsial/text.less';
