@@ -11,7 +11,7 @@
 
 @xxsmall : 320px;
 @xsmall : 480px;
-@small : 768px;
+@small : 767px;
 @medium: 920px;
 @large: 1200px;
 @xlarge: 1920px;
@@ -38,9 +38,15 @@ body{
 	font-family : 'Lato';
     color: @light;
 }
+img{
+    @media (max-width: @medium){
+        width: 100%;
+    }
+}
 
 @import 'parsial/nav.less';
 @import 'parsial/footer.less';
 @import 'parsial/section.less';
 @import 'parsial/button.less';
 @import 'parsial/text.less';
+@import 'parsial/icon.less';

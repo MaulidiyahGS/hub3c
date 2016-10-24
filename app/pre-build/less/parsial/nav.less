@@ -14,6 +14,9 @@ nav{
 		.logo{
 			background-image: url('../images/logo-dark.png');
 		}
+		.toggle{
+			color: @dark;
+		}
 		.menus{
 			.menu{
 				color: @dark;
@@ -45,6 +48,17 @@ nav{
 		position: relative;
 		z-index: 11;
 	}
+	.toggle{
+		float: right;
+		margin-right: 25px;
+		margin-top: 17px;
+		font-size: 30px;
+		display: none;
+
+		@media (max-width: @small){
+			display: block;
+		}
+	}
 	.menus{
 		float: right;
 		margin-right: 25px;
@@ -64,10 +78,47 @@ nav{
 			&.active{
 				color: @blue !important;
 				border-bottom: 4px solid @blue;
+				@media (max-width: @small){
+					border-bottom: 1px solid @blue;
+				}
 			}
 			&:hover{
 				color: @green;
 			}
+			@media (max-width: @small){
+				width: 100%;
+				text-align: center;
+				margin: 0px;
+				border-bottom: solid 1px @light;
+			}
+			&.close{
+				@media (max-width: @small){
+					border: none;
+				}
+			}
+			&:last-child{
+				@media (max-width: @small){
+					border: none;
+				}
+			}
+		}
+
+		&.show-menu{
+			@media (max-width: @small){
+				display: block !important;
+			}
+		}
+		@media (max-width: @small){
+			display: none;
+			width: 100vw;
+		    height: 100vh;
+		    background: @green;
+		    opacity: 0.95;
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    margin: 0px;
+		    padding: 50px;
 		}
 	}
 }

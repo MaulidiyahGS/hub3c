@@ -12,15 +12,40 @@ section{
 
 		p{
 			font-size: 22px;
+			@media (max-width: @xxsmall){
+				font-size: 14px;
+			}
+		}
+		@media (max-width: @xsmall){
+			height: 100vh;
 		}
 	}
 	&.main-two{
 		height: 218px;
 		background: @light;
+		
+		span{
+			@media (max-width: @small){
+				display: none;
+			}
+		}
+		@media (max-width: @xsmall){
+			height: 25vh;
+		}
 	}
 	&.main-three{
 		height: 500px;
 		background: @light;
+
+		.col-50{
+			@media (max-width: @small){
+				width: 100%;
+				background-color: @light;
+			}
+		}
+		@media (max-width: @xsmall){
+			height: 75vh;
+		}
 	}
 	&.main-four{
 		height: 800px;
@@ -28,14 +53,25 @@ section{
 		background-image: url('../images/screen.png');
 		background-position: right bottom;
 		background-repeat: no-repeat;
-		//padding-left: 100px;
+		background-size: 50%;
 
 		.col-50{
-			width: ~"calc(45% - 50px)";
+			width: ~"calc(50% - 50px)";
 			display: block;
+			@media (max-width: @xsmall){
+				width: 100%;
+			}
 		}
 		h4, p{
 			margin-bottom: 30px;
+			@media (max-width: @xsmall){
+				margin-bottom: 10px;
+			}
+		}
+		@media (max-width: @xsmall){
+			height: 100vh;
+			background-position: center 78vh;
+			background-size: 75%;
 		}
 	}
 	&.main-five{
@@ -63,14 +99,18 @@ section{
 .row{
 	display: table-row;
 	clear: both;
+	@media (max-width: @xsmall){
+		display: block;
+	}
 }
 [class|="col"]{
-	display: table-cell;
+	display: inline-block;
 	vertical-align: middle;
 	padding: 20px;
 }
 .col-100{
 	width: 100%;
+	display: table-cell;
 }
 .col-75{
 	width: 75%;

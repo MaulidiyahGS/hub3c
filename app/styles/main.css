@@ -20,6 +20,11 @@ body {
   font-family: 'Lato';
   color: #ffffff;
 }
+@media (max-width: 920px) {
+  img {
+    width: 100%;
+  }
+}
 nav {
   width: 100%;
   height: 75px;
@@ -34,6 +39,9 @@ nav.scrolled .background {
 }
 nav.scrolled .logo {
   background-image: url('../images/logo-dark.png');
+}
+nav.scrolled .toggle {
+  color: #000000;
 }
 nav.scrolled .menus .menu {
   color: #000000;
@@ -61,6 +69,18 @@ nav .logo {
   position: relative;
   z-index: 11;
 }
+nav .toggle {
+  float: right;
+  margin-right: 25px;
+  margin-top: 17px;
+  font-size: 30px;
+  display: none;
+}
+@media (max-width: 767px) {
+  nav .toggle {
+    display: block;
+  }
+}
 nav .menus {
   float: right;
   margin-right: 25px;
@@ -81,20 +101,72 @@ nav .menus .menu.active {
   color: #00aeef !important;
   border-bottom: 4px solid #00aeef;
 }
+@media (max-width: 767px) {
+  nav .menus .menu.active {
+    border-bottom: 1px solid #00aeef;
+  }
+}
 nav .menus .menu:hover {
   color: #88c642;
+}
+@media (max-width: 767px) {
+  nav .menus .menu {
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    border-bottom: solid 1px #ffffff;
+  }
+}
+@media (max-width: 767px) {
+  nav .menus .menu.close {
+    border: none;
+  }
+}
+@media (max-width: 767px) {
+  nav .menus .menu:last-child {
+    border: none;
+  }
+}
+@media (max-width: 767px) {
+  nav .menus.show-menu {
+    display: block !important;
+  }
+}
+@media (max-width: 767px) {
+  nav .menus {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: #88c642;
+    opacity: 0.95;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0px;
+    padding: 50px;
+  }
 }
 footer {
   height: 226px;
   background: #000000;
-  padding-top: 50px;
-  padding-bottom: 40px;
+  padding: 40px;
+}
+@media (max-width: 767px) {
+  footer {
+    height: 345px;
+  }
 }
 footer .content {
   clear: both;
-  width: 1000px;
+  max-width: 1000px;
   margin: auto;
   color: #ffffff;
+}
+@media (max-width: 767px) {
+  footer .content {
+    margin-bottom: 30px;
+    display: inline-block;
+  }
 }
 footer .content div {
   width: 50%;
@@ -109,6 +181,18 @@ footer .content .left .logo {
   width: 152px;
   height: 36px;
   margin-bottom: 20px;
+}
+@media (max-width: 920px) {
+  footer .content .left {
+    width: 45%;
+  }
+}
+@media (max-width: 767px) {
+  footer .content .left {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
 }
 footer .content .right {
   float: right;
@@ -127,8 +211,29 @@ footer .content .right .menus .menu {
 footer .content .right .menus .menu:hover {
   color: #00aeef;
 }
+@media (max-width: 920px) {
+  footer .content .right .menus .menu {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 920px) {
+  footer .content .right {
+    width: 55%;
+  }
+}
+@media (max-width: 767px) {
+  footer .content .right {
+    width: 100%;
+    text-align: center;
+  }
+}
 footer .content p {
   font-size: 14px;
+}
+@media (max-width: 767px) {
+  footer .content p {
+    margin-bottom: 0px;
+  }
 }
 footer .content .active {
   color: #8c969d !important;
@@ -151,13 +256,44 @@ section.main-one {
 section.main-one p {
   font-size: 22px;
 }
+@media (max-width: 320px) {
+  section.main-one p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  section.main-one {
+    height: 100vh;
+  }
+}
 section.main-two {
   height: 218px;
   background: #ffffff;
 }
+@media (max-width: 767px) {
+  section.main-two span {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  section.main-two {
+    height: 25vh;
+  }
+}
 section.main-three {
   height: 500px;
   background: #ffffff;
+}
+@media (max-width: 767px) {
+  section.main-three .col-50 {
+    width: 100%;
+    background-color: #ffffff;
+  }
+}
+@media (max-width: 480px) {
+  section.main-three {
+    height: 75vh;
+  }
 }
 section.main-four {
   height: 800px;
@@ -165,14 +301,33 @@ section.main-four {
   background-image: url('../images/screen.png');
   background-position: right bottom;
   background-repeat: no-repeat;
+  background-size: 50%;
 }
 section.main-four .col-50 {
-  width: calc(45% - 50px);
+  width: calc(50% - 50px);
   display: block;
+}
+@media (max-width: 480px) {
+  section.main-four .col-50 {
+    width: 100%;
+  }
 }
 section.main-four h4,
 section.main-four p {
   margin-bottom: 30px;
+}
+@media (max-width: 480px) {
+  section.main-four h4,
+  section.main-four p {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 480px) {
+  section.main-four {
+    height: 100vh;
+    background-position: center 78vh;
+    background-size: 75%;
+  }
 }
 section.main-five {
   height: 600px;
@@ -199,13 +354,19 @@ section.main-five p {
   display: table-row;
   clear: both;
 }
+@media (max-width: 480px) {
+  .row {
+    display: block;
+  }
+}
 [class|="col"] {
-  display: table-cell;
+  display: inline-block;
   vertical-align: middle;
   padding: 20px;
 }
 .col-100 {
   width: 100%;
+  display: table-cell;
 }
 .col-75 {
   width: 75%;
@@ -225,6 +386,13 @@ section.main-five p {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+@media (max-width: 480px) {
+  [class|="button"] {
+    min-width: 160px;
+    padding: 10px 0px;
+    font-size: 14px;
+  }
 }
 .button-one {
   background: #00aeef;
@@ -265,14 +433,54 @@ h5.regular {
 h1 {
   font-size: 72px;
 }
+@media (max-width: 480px) {
+  h1 {
+    font-size: 64px;
+  }
+}
+@media (max-width: 320px) {
+  h1 {
+    font-size: 48px;
+  }
+}
 h2 {
   font-size: 64px;
+}
+@media (max-width: 480px) {
+  h2 {
+    font-size: 48px;
+  }
+}
+@media (max-width: 320px) {
+  h2 {
+    font-size: 36px;
+  }
 }
 h3 {
   font-size: 48px;
 }
+@media (max-width: 480px) {
+  h3 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 320px) {
+  h3 {
+    font-size: 24px;
+  }
+}
 h4 {
   font-size: 36px;
+}
+@media (max-width: 480px) {
+  h4 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 320px) {
+  h4 {
+    font-size: 18px;
+  }
 }
 p {
   color: #ffffff;
@@ -280,6 +488,11 @@ p {
   margin: auto;
   margin-bottom: 30px;
   max-width: 800px;
+}
+@media (max-width: 767px) {
+  p {
+    font-size: 14px;
+  }
 }
 .text-greyDark {
   color: #47555e !important;
@@ -304,4 +517,32 @@ p {
 .text-right {
   text-align: right !important;
   margin: initial;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-th-menu:before {
+  content: "\e900";
+}
+.icon-twitter:before {
+  content: "\ea96";
 }
