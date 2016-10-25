@@ -23,7 +23,7 @@ app.directive("circle", function($interval){
 			}
 
 			$scope.goPrev = function(){
-				console.log('prev');
+				//console.log('prev');
 				$scope.stop();
 
 				$scope.activeIndex--;
@@ -33,7 +33,7 @@ app.directive("circle", function($interval){
 			}
 
 			$scope.goNext = function(){
-				console.log('nex');
+				//console.log('nex');
 				$scope.stop();
 
 				$scope.activeIndex++;
@@ -43,7 +43,7 @@ app.directive("circle", function($interval){
 			}
 
 			$scope.setIndex = function(i){
-				console.log('set to '+i);
+				//console.log('set to '+i);
 				$scope.stop();
 
 				$scope.activeIndex = i;

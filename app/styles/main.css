@@ -330,6 +330,11 @@ section.three.main {
 section.three.app {
   height: 768px;
 }
+@media (max-width: 920px) {
+  section.three.app {
+    height: 500px;
+  }
+}
 @media (max-width: 767px) {
   section.three.app {
     height: 100vh;
@@ -379,6 +384,7 @@ section.four.app {
   background-image: url('../images/bg.png');
   background-size: cover;
   background-attachment: fixed;
+  background-position: center center;
 }
 section.main-five {
   height: 600px;
@@ -660,8 +666,20 @@ p {
     margin-left: 0px;
   }
 }
+@media (max-width: 767px) {
+  circle {
+    height: 100%;
+    display: inline-block;
+    width: 100%;
+  }
+}
 .circle {
   width: 100%;
+}
+@media (max-width: 767px) {
+  .circle {
+    height: 100%;
+  }
 }
 .circle .circle-arrow {
   width: 25px;
@@ -706,6 +724,8 @@ p {
   .circle .circle-content {
     width: 100%;
     display: block;
+    height: 73%;
+    margin-top: 40%;
   }
 }
 .circle .circle-content .circle-item {
