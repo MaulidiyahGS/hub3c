@@ -1,0 +1,106 @@
+.circle{
+	width: 100%;
+
+	.circle-arrow{
+		width: 25px;
+		display: inline-table;
+		height: 550px;
+		cursor: pointer;
+		background-position: center center;
+		background-repeat: no-repeat;
+		z-index: 3;
+    	position: relative;
+
+    	@media (max-width: @medium){
+    		height: 380px;
+    	}
+
+    	@media (max-width: @small){
+    		display: none;
+    	}
+
+		&.left{
+			background-image : url('../images/arrow-left.png');
+			margin-right: 65px;
+
+			&:hover{
+				background-image : url('../images/arrow-left-hover.png');
+			}
+		}
+
+		&.right{
+			background-image : url('../images/arrow-right.png');
+			margin-left: 65px;
+
+			&:hover{
+				background-image : url('../images/arrow-right-hover.png');
+			}
+		}
+	}
+	.circle-content{
+		width: ~"calc(100% - 190px)";
+		display: inline-table;
+		position: relative;
+
+		@media (max-width: @small){
+    		width: 100%;
+    		display: block;
+    	}
+
+		.circle-item{
+			position: absolute;
+			left:100%;
+			opacity: 0;
+
+			&.active{
+				left: 5%;
+				opacity: 1;
+				transition-property: left;
+    			transition-duration: 1s;
+			    transition-timing: ease;
+			    transition-delay: 0;
+
+			    @media (max-width: @small){
+		    		left: 0%;
+		    	}
+			}
+
+			.circle-item-title{
+				font-size: 24px;
+				margin-bottom: 10px;
+			}
+			.circle-item-subtitle{
+				font-size: 14px;
+				margin-bottom: 25px;
+			}
+			.circle-item-image{
+				//width: 892px;
+				//height: 466px;
+			}
+		}
+	}
+	.circle-bullets{
+		width: 100%;
+		display: inline-table;
+		margin: 25px auto;
+		text-align: center;
+
+		@media (max-width: @small){
+    		display: block;
+    	}
+
+		span{
+			width: 8px;
+			height: 8px;
+			border: solid 1px @blue;
+			border-radius: 50%;
+			display: inline-block;
+			margin-right: 10px;
+			cursor: pointer;
+
+			&.active{
+				background: @blue;
+			}
+		}
+	}
+}

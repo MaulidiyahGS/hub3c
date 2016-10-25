@@ -18,28 +18,47 @@ section{
 		@media (max-width: @xsmall){
 			height: 100vh;
 		}
-	}
-	&.main{
-		background-image : url('../images/main-slider-background.png');
-	}
-	&.app{
-		background-image : url('../images/app-background-one.png');
-	}
-	&.main-two{
-		height: 218px;
+
+		&.main{
+			background-image : url('../images/main-slider-background.png');
+		}
+		&.app{
+			background-image : url('../images/app-background-one.png');
+		}
+	}	
+	&.two{		
 		background: @light;
-		
-		span{
-			@media (max-width: @small){
-				display: none;
+
+		&.main{
+			height: 218px;
+
+			span{
+				@media (max-width: @small){
+					display: none;
+				}
+			}
+			@media (max-width: @xsmall){
+				height: 25vh;
 			}
 		}
-		@media (max-width: @xsmall){
-			height: 25vh;
+		&.app{
+			min-height: 661px;
+
+			.col-90{
+			    margin: 0px 5% !important;
+
+			    h3{
+			    	margin: 80px 50px 40px 50px;
+			    	@media (max-width: @small){
+						margin: initial;
+						margin-bottom: 20px;
+					}
+			    }
+			}
+
 		}
 	}
-	&.main-three{
-		height: 500px;
+	&.three{
 		background: @light;
 
 		.col-50{
@@ -51,33 +70,55 @@ section{
 		@media (max-width: @xsmall){
 			height: 75vh;
 		}
-	}
-	&.main-four{
-		height: 800px;
-		background: @greyDark;
-		background-image: url('../images/screen.png');
-		background-position: right bottom;
-		background-repeat: no-repeat;
-		background-size: 50%;
 
-		.col-50{
-			width: ~"calc(50% - 50px)";
-			display: block;
+		&.main{
+			height: 500px;
+		}
+		&.app{
+			height: 768px;
+			@media (max-width: @small){
+	    		height: 100vh;
+	    	}
+		}
+	}
+	&.four{	
+		&.main{
+			height: 800px;
+			background: @greyDark;
+			background-image: url('../images/screen.png');
+			background-position: right bottom;
+			background-repeat: no-repeat;
+			background-size: 50%;
+
+			@media (min-width: @xlarge){
+				background-size: 35%;
+			}
+
+			.col-50{
+				width: ~"calc(50% - 50px)";
+				display: block;
+				@media (max-width: @xsmall){
+					width: 100%;
+				}
+			}
+			h4, p{
+				margin-bottom: 30px;
+				@media (max-width: @xsmall){
+					margin-bottom: 10px;
+				}
+			}
 			@media (max-width: @xsmall){
-				width: 100%;
+				height: 100vh;
+				background-position: center 78vh;
+				background-size: 75%;
 			}
 		}
-		h4, p{
-			margin-bottom: 30px;
-			@media (max-width: @xsmall){
-				margin-bottom: 10px;
-			}
-		}
-		@media (max-width: @xsmall){
-			height: 100vh;
-			background-position: center 78vh;
-			background-size: 75%;
-		}
+		&.app{
+			height: 740px;
+			background-image: url('../images/bg.png');
+			background-size: cover;
+			background-attachment: fixed;
+		}		
 	}
 	&.main-five{
 		height: 600px;
@@ -116,6 +157,9 @@ section{
 .col-100{
 	width: 100%;
 	display: table-cell;
+}
+.col-90{
+	width: 90%;
 }
 .col-75{
 	width: 75%;

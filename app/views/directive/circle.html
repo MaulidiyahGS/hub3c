@@ -1,0 +1,14 @@
+<div class="circle">
+	<div class="circle-arrow left" ng-click="goPrev()">&nbsp;</div>
+	<div class="circle-content">
+		<div class="circle-item" ng-repeat="(i,m) in mdl" ng-class="{'active' : i == activeIndex}">
+			<div class="circle-item-title text-greyDark text-center">{{m.title}}</div>
+			<div class="circle-item-subtitle text-greyDark text-center">{{m.subtitle}}</div>
+			<img src="{{m.image}}" class="circle-item-image" />
+		</div>
+	</div>
+	<div class="circle-arrow right" ng-click="goNext()">&nbsp;</div>
+	<div class="circle-bullets">
+		<span ng-repeat="(i,m) in mdl" ng-class="{'active' : i == activeIndex}" ng-click="setIndex(i)">&nbsp;</span>
+	</div>
+</div>

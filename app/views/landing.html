@@ -6,7 +6,7 @@
     </div>
     <div class="menus" ng-class="{'show-menu' : showMenuMobile}">
         <div class="menu close text-right" ng-click="changeMenu()"><b>x</b> Close</div>
-        <div class="menu" ng-repeat="m in menus" ui-sref="{{m.state}}" ui-sref-active="active">{{m.text}}</div>
+        <div class="menu" ng-repeat="m in menus" ui-sref="{{m.state}}" ui-sref-active="active" ng-click="changeMenu()">{{m.text}}</div>
     </div>
 </nav>
 <div ui-view></div>
@@ -14,9 +14,7 @@
     <div class="content">
         <div class="left">
             <div class="logo">&nbsp;</div>
-            <p>
-                Hub3c is a purppose built platform that provides business’s with the ability to register on and invite to connect with other businesses bla bla bla.
-            </p>
+            <p>Hub3c is a purpose built platform that connects businesses. Easily register and invite other businesses to connect with your business. Start creating your own private business network today.</p>
         </div>
         <div class="right">
             <div class="menus">

@@ -2,10 +2,38 @@
 	<div class="container">
         <div class="col-100 text-center">
         	<h1>All the apps your business needs in one place</h1>
-        	<p>
-        		Enjoy the free <span class="text-orange">30 day trial</span> for all new accounts
-        	</p>
+        	<!-- 
+        	<p>Enjoy the free <span class="text-orange">30 day trial</span> for all new accounts</p>
         	<button ui-sref="login" class="button-two">Try Free Trial</button>
+        	-->
         </div>
     </div>
+</section>
+<section class="app two">
+	<div class="container">
+		<div class="col-90 text-center">
+			<h3 class="regular text-greyDark">Subscribe to the apps each team member requires</h3>
+			<div class="apps">
+				<div class="app-item" ng-repeat="a in apps">
+					<img src="{{a.icon}}" class="app-icon"/>
+					<div class="app-name">{{a.name}}</div>
+					<div class="app-desc">{{a.desc ? a.desc : '&nbsp;'}}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="app three">
+	<div class="container">
+		<div class="col-100 text-center">
+			<circle mdl="circles"></circle>
+		</div>
+	</div>
+</section>
+<section class="app four">
+	<div class="container">
+		<div class="col-100 text-center">
+			
+		</div>
+	</div>
 </section>

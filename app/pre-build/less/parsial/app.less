@@ -1,0 +1,57 @@
+.apps{
+	width: 100%;
+
+	.app-item{
+		width: 110px;
+		height: auto;
+		display: inline-table;
+		margin-left: 40px;
+		margin-bottom: 40px;
+
+		.app-name{
+			font-size: 18px;
+			text-align: center;
+			color: @greyDark;
+			@media (max-width: @small){
+				font-size: 16px;
+			}
+		}
+
+		.app-desc{
+			font-size: 11px;
+			text-align: center;
+			color: @green;
+		}
+
+		&:nth-child(7n+1){
+			margin-left: 0px;
+		}
+
+		@media (max-width: @medium){
+			width: 100px;
+			margin-left: 20px;
+			margin-bottom: 20px;
+
+			&:nth-child(5n+1){
+				margin-left: 0px;
+			}
+			&:nth-child(7n+1){
+				margin-left: 20px;
+			}
+		}
+
+		@media (max-width: @small){
+			margin-left: 10px;
+			margin-bottom: 10px;
+			&:nth-child(5n+1){
+				margin-left: 10px;
+			}
+			&:nth-child(7n+1){
+				margin-left: 10px;
+			}
+			&:nth-child(2n+1){
+				margin-left: 0px;
+			}
+		}
+	}
+}

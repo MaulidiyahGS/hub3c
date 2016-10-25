@@ -44,7 +44,111 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       url: "app",
       templateUrl: 'views/parsial/app.html',
       controller: function($scope){
-        console.log('app');
+        $scope.apps = [
+                        {
+                          icon: 'images/app-icon/message.png',
+                          name : 'Messages',
+                          desc : 'FREE APP'
+                        },
+                        {
+                          icon: 'images/app-icon/bulletin.png',
+                          name : 'Bulletins',
+                          desc : 'FREE APP'
+                        },
+                        {
+                          icon: 'images/app-icon/video.png',
+                          name : 'Voice & Video',
+                          desc : ''
+                        },
+                        {
+                          icon: 'images/app-icon/workflow.png',
+                          name : 'CRM',
+                          desc : ''
+                        },
+                        {
+                          icon: 'images/app-icon/message.png',
+                          name : 'Workflows',
+                          desc : ''
+                        },
+                        {
+                          icon: 'images/app-icon/bulletin.png',
+                          name : 'Document Management',
+                          desc : ''
+                        },
+                        {
+                          icon: 'images/app-icon/video.png',
+                          name : 'Task & Activities',
+                          desc : ''
+                        },
+                        {
+                          icon: 'images/app-icon/workflow.png',
+                          name : 'Meetins',
+                          desc : ''
+                        },
+                        {
+                          icon: 'images/app-icon/message.png',
+                          name : 'Events',
+                          desc : ''
+                        },
+                        {
+                          icon: 'images/app-icon/bulletin.png',
+                          name : 'Invoices',
+                          desc : ''
+                        },
+                        {
+                          icon: 'images/app-icon/bulletin.png',
+                          name : 'Refferals',
+                          desc : 'FREE APP'
+                        },
+                        {
+                          icon: 'images/app-icon/video.png',
+                          name : 'File Transfer',
+                          desc : ''
+                        },
+                        {
+                          icon: 'images/app-icon/workflow.png',
+                          name : 'Projects',
+                          desc : ''
+                        },
+                        {
+                          icon: 'images/app-icon/workflow.png',
+                          name : 'Notes',
+                          desc : ''
+                        }
+                      ];
+
+        $scope.circles =  [
+                            {
+                              title : 'Slide 1 - Easily transfer any files to your team members',
+                              subtitle : 'Desc 1 - Up to 500GB disk storage for your team.',
+                              image : 'images/screen/1.png'
+                            },
+                            {
+                              title : 'Slide 2 - Easily transfer any files to your team members',
+                              subtitle : 'Desc 2 - Up to 500GB disk storage for your team.',
+                              image : 'images/screen/2.png'
+                            },
+                            {
+                              title : 'Slide 3 - Easily transfer any files to your team members',
+                              subtitle : 'Desc 3 - Up to 500GB disk storage for your team.',
+                              image : 'images/screen/3.png'
+                            },
+                            {
+                              title : 'Slide 4 - Easily transfer any files to your team members',
+                              subtitle : 'Desc 4 - Up to 500GB disk storage for your team.',
+                              image : 'images/screen/4.png'
+                            },
+                            {
+                              title : 'Slide 5 - Easily transfer any files to your team members',
+                              subtitle : 'Desc 5 - Up to 500GB disk storage for your team.',
+                              image : 'images/screen/5.png'
+                            },
+                            {
+                              title : 'Slide 6 - Easily transfer any files to your team members',
+                              subtitle : 'Desc 6 - Up to 500GB disk storage for your team.',
+                              image : 'images/screen/6.png'
+                            }
+                          ];
       }
     })
 
