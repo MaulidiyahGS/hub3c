@@ -142,11 +142,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                               title : 'Slide 5 - Easily transfer any files to your team members',
                               subtitle : 'Desc 5 - Up to 500GB disk storage for your team.',
                               image : 'images/screen/5.png'
-                            },
-                            {
-                              title : 'Slide 6 - Easily transfer any files to your team members',
-                              subtitle : 'Desc 6 - Up to 500GB disk storage for your team.',
-                              image : 'images/screen/6.png'
                             }
                           ];
       }
