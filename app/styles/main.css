@@ -96,6 +96,7 @@ nav .menus .menu {
   padding: 25px 0px;
   margin-left: 25px;
   cursor: pointer;
+  display: inline-block;
 }
 nav .menus .menu:first-child {
   margin-left: 0px;
@@ -592,18 +593,22 @@ section.login h2 {
 }
 .button-one:hover {
   background: #88c642;
+  color: #ffffff;
 }
 .button-one:active {
   background: #47555e;
+  color: #ffffff;
 }
 .button-two {
   background: #88c642;
 }
 .button-two:hover {
   background: #00aeef;
+  color: #ffffff;
 }
 .button-two:active {
   background: #47555e;
+  color: #ffffff;
 }
 h1,
 h2,
@@ -697,11 +702,11 @@ p {
   }
 }
 a {
-  color: #00aeef !important;
+  color: #00aeef;
   text-decoration: none;
 }
 a:hover {
-  color: #88c642 !important;
+  color: #88c642;
 }
 .text-blue {
   color: #00aeef !important;

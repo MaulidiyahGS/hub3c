@@ -1,118 +1,65 @@
-var app = angular.module("hub3c", ['ui.router']);
+var app = angular.module("hub3c", ['ngRoute']);
 
-app.config(function ($stateProvider, $urlRouterProvider) {
-    $stateProvider
-
-  	.state('landing', {
-    	url: "landing",
-    	templateUrl: "views/landing.html",
-    	controller: function($scope){
-      	$scope.showMenuMobile = false;
-        $scope.changeMenu = function(){
-          $scope.showMenuMobile = !$scope.showMenuMobile;
-        }
-        $scope.menus =  [
-                          {
-                            state : 'landing.home',
-                            text : 'hub3c'
-                          },
-                          {
-                            state : 'landing.app',
-                            text : 'Apps'
-                          },
-                          {
-                            state : 'landing.partner',
-                            text : 'Global Partner Program'
-                          }/*,
-                          {
-                            state : 'landing.about',
-                            text : 'About Us'
-                          }*/
-                        ];
-      }
-  	})
-
-  	.state('landing.home', {
-	    url: "home",
-	    templateUrl: 'views/parsial/home.html',
+app.config(function ($routeProvider) {
+    $routeProvider
+    .when('/', {
+      templateUrl: 'views/parsial/home.html',
       controller: function($scope){
-      	console.log('home');
+        console.log('home');
       }
-  	})
-
-    .state('landing.app', {
-      url: "app",
+    })
+    .when('/app', {
       templateUrl: 'views/parsial/app.html',
       controller: function($scope){
         $scope.apps = [
                         {
-                          icon: 'images/app-icon/message.png',
+                          icon: 'images/app-icon/app-icon-messages.png',
                           name : 'Messages',
                           desc : 'FREE APP'
                         },
                         {
-                          icon: 'images/app-icon/bulletin.png',
+                          icon: 'images/app-icon/app-icon-bulletins.png',
                           name : 'Bulletins',
                           desc : 'FREE APP'
                         },
                         {
-                          icon: 'images/app-icon/video.png',
+                          icon: 'images/app-icon/app-icon-videochat.png',
                           name : 'Voice & Video',
                           desc : ''
                         },
                         {
-                          icon: 'images/app-icon/workflow.png',
+                          icon: 'images/app-icon/app-icon-crm.png',
                           name : 'CRM',
                           desc : ''
                         },
                         {
-                          icon: 'images/app-icon/message.png',
+                          icon: 'images/app-icon/app-icon-workflow.png',
                           name : 'Workflows',
                           desc : ''
                         },
                         {
-                          icon: 'images/app-icon/bulletin.png',
+                          icon: 'images/app-icon/app-icon-documents.png',
                           name : 'Document Management',
                           desc : ''
                         },
                         {
-                          icon: 'images/app-icon/video.png',
+                          icon: 'images/app-icon/app-icon-job2job.png',
                           name : 'Task & Activities',
                           desc : ''
                         },
                         {
-                          icon: 'images/app-icon/workflow.png',
-                          name : 'Meetins',
-                          desc : ''
-                        },
-                        {
-                          icon: 'images/app-icon/message.png',
-                          name : 'Events',
-                          desc : ''
-                        },
-                        {
-                          icon: 'images/app-icon/bulletin.png',
-                          name : 'Invoices',
-                          desc : ''
-                        },
-                        {
-                          icon: 'images/app-icon/bulletin.png',
-                          name : 'Refferals',
-                          desc : 'FREE APP'
-                        },
-                        {
-                          icon: 'images/app-icon/video.png',
+                          icon: 'images/app-icon/app-icon-filetransfer.png',
                           name : 'File Transfer',
                           desc : ''
                         },
                         {
-                          icon: 'images/app-icon/workflow.png',
+                          icon: 'images/app-icon/app-icon-project.png',
                           name : 'Projects',
                           desc : ''
                         },
                         {
-                          icon: 'images/app-icon/workflow.png',
-                          name : 'Notes',
+                          icon: 'images/app-icon/app-icon-storage.png',
+                          name : 'Storage',
                           desc : ''
                         }
                       ];
@@ -154,27 +101,15 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                           ];
       }
     })
-
-    .state('landing.partner', {
-      url: "partner",
+    .when('/partner', {
       templateUrl: 'views/parsial/partner.html',
       controller: function($scope){
         console.log('partner');
       }
     })
-
-    .state('landing.about', {
-      url: "about",
-      templateUrl: 'views/parsial/about.html',
-      controller: function($scope){
-        console.log('about');
-      }
-    })
-
-    .state('landing.register', {
-      url: "register",
+    .when('/register/:as', {
       templateUrl: 'views/parsial/register.html',
-      controller: function($scope){
+      controller: function($scope, $routeParams){
         console.log('register');
         $scope.form = {
                         input : [
@@ -195,7 +130,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                                     input : 'input',
                                     type : 'text',
                                     note : '',
-                                    model : 'busines'
+                                    model : 'business'
                                   },
                                   {
                                     name: 'Contact',
@@ -230,34 +165,56 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                                   }
                                 ],
                         data : {
-                          registerAs : 'App Partner',
-                          businnes: '',
+                          registerAs : $routeParams.as,
+                          business: '',
                           contact : '',
                           email : '',
                           country : 'Australia',
                           phone: ''
                         }
-                      }; 
+                      };
+        $scope.register = function(){
+          var empty = [];
+          for(var i in $scope.form.data){
+            if($scope.form.data[i] == ''){
+              empty.push(i);
+            }
+          }
+          if(empty.length > 0){
+            alert(empty.join(', ')+' cannot be empty');
+          }
+        } 
       }
-    });
-  	/*$urlRouterProvider.otherwise(function($injector) {
-      var $state = $injector.get('$state');
-      $state.go('landing.home');
-    });*/
+    })
+    .otherwise({ redirectTo: '/' });
 });
-/*app.controller('MainCtrl', function ($scope, $state) {
-    $state.go('landing.home');
-    $scope.goTo = function(state){
-      $state.go(state);
-    }
-})*/
 
-app.run(function($rootScope, $state){
-  $state.go('landing.home');
-  $rootScope.goTo = function(state){
-    $state.go(state);
+app.run(function($rootScope, $location, $routeParams){
+  $rootScope.params = $routeParams;
+  $rootScope.isActive = function (viewLocation) {
+    var active = (viewLocation === $location.path());
+    return active;
+  };
+  $rootScope.showMenuMobile = false;
+  $rootScope.changeMenu = function(){
+    $rootScope.showMenuMobile = !$rootScope.showMenuMobile;
   }
-  $rootScope.is = function(name){
-    return $state.is(name);
-  }
+  $rootScope.menus =  [
+                    {
+                      url : '/',
+                      text : 'hub3c'
+                    },
+                    {
+                      url : '/app',
+                      text : 'Apps'
+                    },
+                    {
+                      url : '/partner',
+                      text : 'Global Partner Program'
+                    }/*,
+                    {
+                      state : 'landing.about',
+                      text : 'About Us'
+                    }*/
+                  ];
 });

@@ -16,6 +16,38 @@
     <script src="http://localhost:35729/livereload.js"></script>
 </head>
 <body ng-app="hub3c">	
-	<div ui-view></div>     
+	<nav scroll ng-class="{'scrolled' : boolChangeClass || isActive('/register/'+params.as)}">
+        <div class="background">&nbsp;</div>
+        <div class="logo" ui-sref="landing.home">&nbsp;</div>
+        <div class="toggle" ng-click="changeMenu()">
+            <i class="icon icon-th-menu"></i>
+        </div>
+        <div class="menus" ng-class="{'show-menu' : showMenuMobile}">
+            <div class="menu close text-right" ng-click="changeMenu()"><b>x</b> Close</div>
+            <a class="menu" ng-repeat="m in menus" ng-class="{'active' : isActive(m.url)}" href="#{{m.url}}" ng-click="changeMenu()">{{m.text}}</a>
+        </div>
+    </nav>
+    <div ng-view></div>
+    <footer>
+        <div class="content">
+            <div class="left">
+                <div class="logo">&nbsp;</div>
+                <p>Hub3c is a purpose built platform that connects businesses. Easily register and invite other businesses to connect with your business. Start creating your own private business network today.</p>
+            </div>
+            <div class="right">
+                <div class="menus">
+                    <a class="menu" ng-repeat="m in menus" ng-class="{'active' : isActive(m.url)}" href="#{{m.url}}">{{m.text}}</a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="left">
+                <p class="active">&copy;2016.Hub3c</p>
+            </div>
+            <div class="right">
+                <p>Follow us <a>@hub3c</a> for news & updates</p>
+            </div>
+        </div>
+    </footer>       
 </body>
 </html>

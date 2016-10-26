@@ -76,7 +76,8 @@ module.exports = function (grunt) {
             js: {
                 src:[
                         'app/components/angular/angular.min.js',
-                        'app/components/angular-ui-router/release/angular-ui-router.min.js',
+                        'app/components/angular-route/angular-route.min.js',
+                        //'app/components/angular-ui-router/release/angular-ui-router.min.js',
                         'app/pre-build/js/app.js',
                         'app/pre-build/js/directive/*.js'
                     ],
