@@ -621,7 +621,12 @@ h1.regular,
 h2.regular,
 h3.regular,
 h4.regular,
-h5.regular {
+h5.regular,
+h1 .regular,
+h2 .regular,
+h3 .regular,
+h4 .regular,
+h5 .regular {
   font-family: 'Lato' !important;
 }
 h1 {
@@ -998,7 +1003,4 @@ a:hover {
 .form .form-group select:focus {
   border: solid 1px #00aeef;
   outline: none;
-}
-.form .form-group select {
-  -webkit-appearance: menulist;
 }

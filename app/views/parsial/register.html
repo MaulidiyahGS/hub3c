@@ -1,19 +1,19 @@
 <section class="login">
 	<div class="container">
         <div class="col-100 text-center">
-        	<h2 class="text-greyDark"><span class="register">Join</span> hub3c</h2>
-        	<p class="text-greyDark">Register as an <span class="text-blue">App Partner</span></p>
+        	<h2 class="text-greyDark"><span class="regular">Join</span> hub3c</h2>
+        	<p class="text-greyDark">Register as an <span class="text-blue">{{form.data.registerAs}}</span></p>
         	<div class="form">
         		<div class="form-group" ng-repeat="i in form.input">
         			<span>{{i.name}}</span>
-        			<input ng-if="i.input == 'input'" type="{{i.type}}" placeholder="{{i.name}}"/>
-        			<select ng-if="i.input == 'select'">
+        			<input ng-if="i.input == 'input'" type="{{i.type}}" placeholder="{{i.name}}" ng-model="form.data[i.model]"/>
+        			<select ng-if="i.input == 'select'" ng-model="form.data[i.model]">
         				<option ng-repeat="o in i.option" value="{{o}}">{{o}}</option>
         			</select>
         			<span>{{i.note}}</span>
         		</div>
         		<div class="form-group">
-        			<button class="button-one">Register App Partner</button>
+        			<button class="button-one">Register {{form.data.registerAs}}</button>
         		</div>
         	</div>
         </div>
