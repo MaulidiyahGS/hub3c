@@ -350,11 +350,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                           {
                             state : 'landing.partner',
                             text : 'Global Partner Program'
-                          },
+                          }/*,
                           {
                             state : 'landing.about',
                             text : 'About Us'
-                          }
+                          }*/
                         ];
       }
   	})
@@ -446,30 +446,38 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
         $scope.circles =  [
                             {
-                              title : 'Slide 1 - Easily transfer any files to your team members',
-                              subtitle : 'Desc 1 - Up to 500GB disk storage for your team.',
+                              title : 'Hub3c – Connect…Communicate…Collaborate',
+                              subtitle : 'All your apps, business network, communications in the one place. One username, One password, One platform.',
                               image : 'images/screen/1.png'
                             },
                             {
-                              title : 'Slide 2 - Easily transfer any files to your team members',
-                              subtitle : 'Desc 2 - Up to 500GB disk storage for your team.',
+                              title : 'Projects app - Never miss a deadline again. Collaborate on projects from anywhere in the world.',
+                              subtitle : 'Easily manage internal projects as well as invite connections to collaborate on projects. ',
                               image : 'images/screen/2.png'
                             },
                             {
-                              title : 'Slide 3 - Easily transfer any files to your team members',
-                              subtitle : 'Desc 3 - Up to 500GB disk storage for your team.',
+                              title : 'Documents app - Easily upload your files. In just a few clicks share and collaborate with your team and external connections.',
+                              subtitle : 'Documents is a super secure document management application with full audit and version control for your files.',
                               image : 'images/screen/3.png'
                             },
                             {
-                              title : 'Slide 4 - Easily transfer any files to your team members',
-                              subtitle : 'Desc 4 - Up to 500GB disk storage for your team.',
+                              title : 'CRM app – Store company contacts & businesses, track opportunities with your interactive sales pipeline.',
+                              subtitle : 'CRM is a powerful yet easy to use application that makes tracking sales opportunities and contacts a breeze.',
                               image : 'images/screen/4.png'
                             },
                             {
-                              title : 'Slide 5 - Easily transfer any files to your team members',
-                              subtitle : 'Desc 5 - Up to 500GB disk storage for your team.',
+                              title : 'Bulletin app – Bring your company together, share and discuss ideas, encourage conversations. ',
+                              subtitle : 'Connect with internal teams as well as businesses you are connected with…how powerful is that!',
                               image : 'images/screen/5.png'
                             }
+                          ];
+        $scope.partners = [
+                            'images/partner/github.png',
+                            'images/partner/bitbucket.png',
+                            'images/partner/tidal.png',
+                            'images/partner/roku.png',
+                            'images/partner/toeic.png',
+                            'images/partner/slack.png',
                           ];
       }
     })
