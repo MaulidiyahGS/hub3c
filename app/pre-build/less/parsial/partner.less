@@ -5,9 +5,19 @@
 		display: inline-table;
 		vertical-align: middle;
 		margin-left: 40px;
+		margin-bottom: 40px;
+		width: auto;
 
 		&:first-child{
 			margin-left: 0px;
+		}
+
+		@media (max-width: @medium){
+			margin-left: 60px;
+		}
+		@media (max-width: @small){
+			margin-left: 20px;
+			margin-bottom: 20px;
 		}
 	}
 }

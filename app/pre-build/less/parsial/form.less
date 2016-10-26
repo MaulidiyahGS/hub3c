@@ -1,0 +1,51 @@
+.form {
+  	width: 500px;
+  	min-height: 580px;
+  	border-radius: 10px;
+  	background-color: @light;
+  	box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.2);
+  	padding: 35px 50px;
+  	margin-bottom: 60px;
+  	margin-left: ~"calc(50% - 250px)";
+
+  	.form-group{
+  		width: 100%;
+  		text-align: left;
+  		margin-bottom: 20px;
+
+  		span, input, select, button{
+  			width: 100%;
+  			display: block;
+  		}
+  		span{
+  			margin: 6px 0px;
+
+  			&:first-child{
+  				font-size: 14px;
+  				color: @greyDark;
+  			}
+  			&:nth-child(n+2){
+  				font-size: 12px;
+  				color: @greyLight;
+  			}
+  		}
+  		input, select{
+  			height: 44px;
+  			border-radius: 4px;
+  			border: solid 1px @grey;
+  			color: @greyDark;
+  			padding: 12px 15px;
+  			font-size: 16px;
+
+
+  			&:active,
+  			&:focus{
+  				border: solid 1px @blue;
+  				outline: none;
+  			}
+  		}
+  		select{
+  			-webkit-appearance: menulist;
+  		}
+  	}
+}

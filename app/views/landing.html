@@ -1,4 +1,4 @@
-<nav scroll ng-class="{'scrolled' : boolChangeClass}">
+<nav scroll ng-class="{'scrolled' : boolChangeClass || is('landing.register')}">
     <div class="background">&nbsp;</div>
     <div class="logo" ui-sref="landing.home">&nbsp;</div>
     <div class="toggle" ng-click="changeMenu()">

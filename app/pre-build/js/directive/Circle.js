@@ -14,7 +14,7 @@ app.directive("circle", function($interval){
 				$scope.promise = $interval(function(){
 					$scope.activeIndex++;
 					$scope.activeIndex = $scope.activeIndex % $scope.mdl.length;
-				}.bind(this), 4000);
+				}.bind(this), 12000);
 			}
 
 			$scope.stop = function(){

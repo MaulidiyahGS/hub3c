@@ -498,11 +498,61 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       }
     })
 
-    .state('login', {
-      url: "login",
-      templateUrl: 'views/login.html',
+    .state('landing.register', {
+      url: "register",
+      templateUrl: 'views/parsial/register.html',
       controller: function($scope){
-        console.log('login');
+        console.log('register');
+        $scope.form = {
+                        input : [
+                                  {
+                                    name: 'Register as',
+                                    input : 'select',
+                                    type : 'single',
+                                    option: [
+                                              'App Partner',
+                                              'Business Support Partner',
+                                              'Channel Partner'
+                                            ],
+                                    note : ''
+                                  },
+                                  {
+                                    name: 'Business Name',
+                                    input : 'input',
+                                    type : 'text',
+                                    note : ''
+                                  },
+                                  {
+                                    name: 'Contact',
+                                    input : 'input',
+                                    type : 'text',
+                                    note : ''
+                                  },
+                                  {
+                                    name: 'Email',
+                                    input : 'input',
+                                    type : 'email',
+                                    note : ''
+                                  },
+                                  {
+                                    name: 'Country',
+                                    input : 'select',
+                                    type : 'single',
+                                    option: [
+                                              'Australia',
+                                              'Indonesia',
+                                              'Singapore'
+                                            ],
+                                    note : ''
+                                  },
+                                  {
+                                    name: 'Phone',
+                                    input : 'input',
+                                    type : 'number',
+                                    note : 'Provide the number with country code, ex. +365 895-99-24'
+                                  }
+                                ]
+                      }; 
       }
     });
   	/*$urlRouterProvider.otherwise(function($injector) {
@@ -522,6 +572,9 @@ app.run(function($rootScope, $state){
   $rootScope.goTo = function(state){
     $state.go(state);
   }
+  $rootScope.is = function(name){
+    return $state.is(name);
+  }
 });
 app.directive("circle", function($interval){
 	return {
@@ -539,7 +592,7 @@ app.directive("circle", function($interval){
 				$scope.promise = $interval(function(){
 					$scope.activeIndex++;
 					$scope.activeIndex = $scope.activeIndex % $scope.mdl.length;
-				}.bind(this), 4000);
+				}.bind(this), 12000);
 			}
 
 			$scope.stop = function(){
