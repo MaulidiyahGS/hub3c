@@ -708,6 +708,8 @@ p {
 a {
   color: #00aeef;
   text-decoration: none;
+  display: inline-table;
+  margin-bottom: 20px;
 }
 a:hover {
   color: #88c642;
@@ -783,6 +785,12 @@ a:hover {
   margin-left: 40px;
   margin-bottom: 40px;
 }
+@media (max-width: 1200px) and (orientation: landscape) {
+  .apps .app-item {
+    margin-left: 50px;
+    margin-bottom: 50px;
+  }
+}
 .apps .app-item .app-name {
   font-size: 18px;
   text-align: center;
@@ -826,6 +834,14 @@ a:hover {
     margin-left: 10px;
   }
   .apps .app-item:nth-child(2n+1) {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 1200px) and (orientation: landscape) {
+  .apps .app-item:nth-child(7n+1) {
+    margin-left: 50px;
+  }
+  .apps .app-item:nth-child(5n+1) {
     margin-left: 0px;
   }
 }
@@ -883,7 +899,7 @@ a:hover {
   display: inline-table;
   position: relative;
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   .circle .circle-content {
     width: 100%;
     display: block;
@@ -917,6 +933,11 @@ a:hover {
 .circle .circle-content .circle-item .circle-item-subtitle {
   font-size: 14px;
   margin-bottom: 25px;
+}
+@media (max-width: 1200px) and (orientation: landscape) {
+  .circle .circle-content .circle-item .circle-item-image {
+    width: 750px;
+  }
 }
 .circle .circle-bullets {
   width: 100%;
