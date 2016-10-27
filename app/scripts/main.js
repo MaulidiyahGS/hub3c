@@ -445,7 +445,7 @@ app.config(function ($routeProvider) {
     })
     .when('/register/:as', {
       templateUrl: 'views/parsial/register.html',
-      controller: function($scope, $routeParams){
+      controller: function($scope, $routeParams, $http){
         console.log('register');
         $scope.form = {
                         input : [
@@ -507,7 +507,10 @@ app.config(function ($routeProvider) {
                           email : '',
                           country : 'Australia',
                           phone: ''
-                        }
+                        },
+                        hasMessage: false,
+                        message : '',
+                        messageType : ''
                       };
         $scope.register = function(){
           var empty = [];
@@ -517,7 +520,38 @@ app.config(function ($routeProvider) {
             }
           }
           if(empty.length > 0){
-            alert(empty.join(', ')+' cannot be empty');
+            for(var i in empty){
+              angular.element(document.getElementById('form-'+empty[i])).addClass('form-error');
+            }
+            $scope.form.hasMessage = true;
+            $scope.form.message = 'Please fill '+empty.join(', ')+'.';
+            $scope.form.messageType = 'error';
+          }
+          else{
+            $http({
+              method: 'POST',
+              url: 'send.php',
+              data: $scope.form.data
+            })
+            .then(
+              function successCallback(response) {
+                //console.log(response);
+                $scope.form.hasMessage = true;
+                $scope.form.message = response.data.message;
+                if(response.data.status){
+                  $scope.form.messageType = 'success';
+                }
+                else{
+                  $scope.form.messageType = 'error';
+                }
+              }, 
+              function errorCallback(response) {
+                //console.log(response);
+                $scope.form.hasMessage = true;
+                $scope.form.message = response.statusText;
+                $scope.form.messageType = 'error';
+              }
+            );
           }
         } 
       }

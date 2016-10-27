@@ -9,6 +9,7 @@
 @dark : #000;
 @light: #fff;
 @bg : #b5b7b7;
+@error: #e5122c;
 
 @xxsmall : 320px;
 @xsmall : 480px;
@@ -41,7 +42,7 @@ body{
     color: @light;
 }
 img{
-    @media (max-width: @medium){
+    @media (max-width: @medium) and (orientation:portrait){
         width: 100%;
     }
 }

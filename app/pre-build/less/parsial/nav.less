@@ -81,14 +81,14 @@ nav{
 			&.active{
 				color: @blue !important;
 				border-bottom: 4px solid @blue;
-				@media (max-width: @small){
+				@media (max-width: @small) and (orientation:portrait){
 					border-bottom: 1px solid @blue;
 				}
 			}
 			&:hover{
 				color: @green;
 			}
-			@media (max-width: @small){
+			@media (max-width: @small) and (orientation:portrait){
 				width: 100%;
 				text-align: center;
 				margin: 0px;
@@ -96,7 +96,7 @@ nav{
 			}
 			&.close{
 				display: none;
-				@media (max-width: @small){
+				@media (max-width: @small) and (orientation:portrait){
 					display: block;
 					border: none;
 				}
@@ -109,11 +109,11 @@ nav{
 		}
 
 		&.show-menu{
-			@media (max-width: @small){
+			@media (max-width: @small) and (orientation:portrait){
 				display: block !important;
 			}
 		}
-		@media (max-width: @small){
+		@media (max-width: @small) and (orientation:portrait){
 			display: none;
 			width: 100vw;
 		    height: 100vh;

@@ -8,6 +8,14 @@
   	margin-bottom: 60px;
   	margin-left: ~"calc(50% - 250px)";
 
+    @media (max-width: @small) and (orientation:portrait){
+      width: 100%;
+      margin-left: 0px;
+    }
+    @media (max-width: @xsmall) and (orientation:portrait){
+      padding: 30px;
+    }
+
   	.form-group{
   		width: 100%;
   		text-align: left;
@@ -44,5 +52,37 @@
   				outline: none;
   			}
   		}
+
+      &.error{
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+
+        p{
+          color: @error;
+          margin: 0;
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+
+      &.success{
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+
+        p{
+          color: @green;
+          margin: 0;
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+
+      &.form-error{
+        input, select{
+          border: solid 1px @error;
+        }
+      }
   	}
 }

@@ -4,7 +4,7 @@
         	<h2 class="text-greyDark"><span class="regular">Join</span> hub3c</h2>
         	<p class="text-greyDark">Register as an <span class="text-blue">{{form.data.registerAs}}</span></p>
         	<div class="form">
-        		<div class="form-group" ng-repeat="i in form.input">
+        		<div class="form-group" id="form-{{i.model}}" ng-repeat="i in form.input">
         			<span>{{i.name}}</span>
         			<input ng-if="i.input == 'input'" type="{{i.type}}" placeholder="{{i.name}}" ng-model="form.data[i.model]"/>
         			<select ng-if="i.input == 'select'" ng-model="form.data[i.model]">
@@ -15,6 +15,9 @@
         		<div class="form-group">
         			<button class="button-one" ng-click="register()">Register {{form.data.registerAs}}</button>
         		</div>
+                <div class="form-group {{form.messageType}}" ng-show="form.hasMessage">
+                    <p>{{form.message}}</p>
+                </div>
         	</div>
         </div>
     </div>

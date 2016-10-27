@@ -12,11 +12,11 @@ section{
 
 		p{
 			font-size: 22px;
-			@media (max-width: @xxsmall){
+			@media (max-width: @xxsmall) and (orientation:portrait){
 				font-size: 14px;
 			}
 		}
-		@media (max-width: @xsmall){
+		@media (max-width: @xsmall) and (orientation:portrait){
 			height: 100vh;
 		}
 
@@ -37,11 +37,11 @@ section{
 			height: 218px;
 
 			span{
-				@media (max-width: @small){
+				@media (max-width: @small) and (orientation:portrait){
 					display: none;
 				}
 			}
-			@media (max-width: @xsmall){
+			@media (max-width: @xsmall) and (orientation:portrait){
 				height: 25vh;
 			}
 		}
@@ -53,7 +53,7 @@ section{
 
 			    h3{
 			    	margin: 80px 50px 40px 50px;
-			    	@media (max-width: @small){
+			    	@media (max-width: @small) and (orientation:portrait){
 						margin: initial;
 						margin-bottom: 20px;
 					}
@@ -62,17 +62,17 @@ section{
 
 		}
 		&.partner{
-			height: 560px;
-			@media (max-width: @small){
+			height: 650px;
+			@media (max-width: @small) and (orientation:portrait){
 				height: auto;
 			}
 
 			.col-33{
 				padding: 60px 50px;
 				border-right: solid 1px @greyLighter;
-			    height: 560px;
+			    height: 650px;
 
-			    @media (max-width: @medium){
+			    @media (max-width: @medium) and (orientation:portrait){
 			    	padding: 20px;
 			    	&:first-child{
 			    		padding-left: 0px;
@@ -81,7 +81,7 @@ section{
 			    		padding-right: 0px;
 			    	}
 			    }
-			    @media (max-width: @small){
+			    @media (max-width: @small) and (orientation:portrait){
 			    	padding: 20px;
 			    	padding-bottom: 0px;
 			    	width: 100%;
@@ -116,12 +116,12 @@ section{
 		background: @light;
 
 		.col-50{
-			@media (max-width: @small){
+			@media (max-width: @small) and (orientation:portrait){
 				width: 100%;
 				background-color: @light;
 			}
 		}
-		@media (max-width: @xsmall){
+		@media (max-width: @xsmall) and (orientation:portrait){
 			height: 75vh;
 		}
 
@@ -130,10 +130,10 @@ section{
 		}
 		&.app{
 			height: 768px;
-			@media (max-width: @medium){
+			@media (max-width: @medium) and (orientation:portrait){
 	    		height: 500px;
 	    	}
-			@media (max-width: @small){
+			@media (max-width: @small) and (orientation:portrait){
 	    		height: 100vh;
 	    	}
 		}
@@ -142,29 +142,29 @@ section{
 		&.main{
 			height: 800px;
 			background: @greyDark;
-			background-image: url('../images/screen.png');
+			background-image: url('../images/screen/1.png');
 			background-position: right bottom;
 			background-repeat: no-repeat;
 			background-size: 50%;
 
-			@media (min-width: @xlarge){
+			@media (min-width: @xlarge) and (orientation:portrait){
 				background-size: 35%;
 			}
 
 			.col-50{
 				width: ~"calc(50% - 50px)";
 				display: block;
-				@media (max-width: @xsmall){
+				@media (max-width: @xsmall) and (orientation:portrait){
 					width: 100%;
 				}
 			}
 			h4, p{
 				margin-bottom: 30px;
-				@media (max-width: @xsmall){
+				@media (max-width: @xsmall) and (orientation:portrait){
 					margin-bottom: 10px;
 				}
 			}
-			@media (max-width: @xsmall){
+			@media (max-width: @xsmall) and (orientation:portrait){
 				height: 100vh;
 				background-position: center 78vh;
 				background-size: 75%;
@@ -177,12 +177,12 @@ section{
 			//background-attachment: fixed;
 		    background-position: center bottom;
 
-		    @media (max-width: @medium){
-	    	    background-size: contain;			    
+		    @media (max-width: @medium) and (orientation:portrait){
+	    	    //background-size: contain;			    
 			    background-repeat: no-repeat;
 			    background-color: @bg;
 		    }
-		    @media (max-width: @small){
+		    @media (max-width: @small) and (orientation:portrait){
     			height: 100vh;
     		}
 
@@ -191,11 +191,11 @@ section{
 			    margin-left: 12.5%;
 			    margin-top: 3%;
 
-			    @media (max-width: @small){
+			    @media (max-width: @small) and (orientation:portrait){
 			    	width: ~"calc(100% - 20px)";
 			    	margin-left: 0px;
 			    }
-			    @media (max-width: @small){
+			    @media (max-width: @small) and (orientation:portrait){
 			    	width: 100%
 			    }
 		    }
@@ -204,7 +204,7 @@ section{
 		    		font-size: 64px;
 		    		font-family: 'Lato-Bold';
 
-		    		@media (max-width: @small){
+		    		@media (max-width: @small) and (orientation:portrait){
 		    			font-size: 48px;
 		    		}
 		    	}
@@ -225,7 +225,7 @@ section{
 		}
 
 		&.app{
-			height: 700px;
+			height: 350px;
 			background-color: @light;
 			background-image: url('../images/app-background-five.png');
 			background-position: center top;
@@ -234,7 +234,7 @@ section{
 
 			h3{
 				margin-bottom: 200px;
-				margin-top: 150px;
+				margin-top: 200px;
 
 				@media (max-width: @medium){
 					margin-bottom: 120px; 
@@ -258,6 +258,12 @@ section{
 		background: #ededed;
 		min-height: ~"calc(100vh - 226px)";
 
+		@media (max-width: @xsmall) and (orientation:portrait){
+			.container{
+				padding: 0px;
+			}
+		}
+
 		h2{
 			margin-top: 120px;
 		}
@@ -277,7 +283,7 @@ section{
 .row{
 	display: table-row;
 	clear: both;
-	@media (max-width: @xsmall){
+	@media (max-width: @xsmall) and (orientation:portrait){
 		display: block;
 	}
 }

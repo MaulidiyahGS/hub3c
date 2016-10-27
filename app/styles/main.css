@@ -21,7 +21,7 @@ body {
   font-family: 'Lato';
   color: #ffffff;
 }
-@media (max-width: 920px) {
+@media (max-width: 920px) and (orientation: portrait) {
   img {
     width: 100%;
   }
@@ -105,7 +105,7 @@ nav .menus .menu.active {
   color: #00aeef !important;
   border-bottom: 4px solid #00aeef;
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   nav .menus .menu.active {
     border-bottom: 1px solid #00aeef;
   }
@@ -113,7 +113,7 @@ nav .menus .menu.active {
 nav .menus .menu:hover {
   color: #88c642;
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   nav .menus .menu {
     width: 100%;
     text-align: center;
@@ -124,7 +124,7 @@ nav .menus .menu:hover {
 nav .menus .menu.close {
   display: none;
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   nav .menus .menu.close {
     display: block;
     border: none;
@@ -135,12 +135,12 @@ nav .menus .menu.close {
     border: none;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   nav .menus.show-menu {
     display: block !important;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   nav .menus {
     display: none;
     width: 100vw;
@@ -159,7 +159,7 @@ footer {
   background: #000000;
   padding: 40px;
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   footer {
     height: 345px;
   }
@@ -170,7 +170,7 @@ footer .content {
   margin: auto;
   color: #ffffff;
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   footer .content {
     margin-bottom: 30px;
     display: inline-block;
@@ -190,12 +190,12 @@ footer .content .left .logo {
   height: 36px;
   margin-bottom: 20px;
 }
-@media (max-width: 920px) {
+@media (max-width: 920px) and (orientation: portrait) {
   footer .content .left {
     width: 45%;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   footer .content .left {
     width: 100%;
     text-align: center;
@@ -220,17 +220,17 @@ footer .content .right .menus .menu {
 footer .content .right .menus .menu:hover {
   color: #00aeef;
 }
-@media (max-width: 920px) {
+@media (max-width: 920px) and (orientation: portrait) {
   footer .content .right .menus .menu {
     margin-left: 10px;
   }
 }
-@media (max-width: 920px) {
+@media (max-width: 920px) and (orientation: portrait) {
   footer .content .right {
     width: 55%;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   footer .content .right {
     width: 100%;
     text-align: center;
@@ -239,7 +239,7 @@ footer .content .right .menus .menu:hover {
 footer .content p {
   font-size: 14px;
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   footer .content p {
     margin-bottom: 0px;
   }
@@ -265,12 +265,12 @@ section.one {
 section.one p {
   font-size: 22px;
 }
-@media (max-width: 320px) {
+@media (max-width: 320px) and (orientation: portrait) {
   section.one p {
     font-size: 14px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 480px) and (orientation: portrait) {
   section.one {
     height: 100vh;
   }
@@ -290,12 +290,12 @@ section.two {
 section.two.main {
   height: 218px;
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   section.two.main span {
     display: none;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 480px) and (orientation: portrait) {
   section.two.main {
     height: 25vh;
   }
@@ -309,16 +309,16 @@ section.two.app .col-90 {
 section.two.app .col-90 h3 {
   margin: 80px 50px 40px 50px;
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   section.two.app .col-90 h3 {
     margin: initial;
     margin-bottom: 20px;
   }
 }
 section.two.partner {
-  height: 560px;
+  height: 650px;
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   section.two.partner {
     height: auto;
   }
@@ -326,9 +326,9 @@ section.two.partner {
 section.two.partner .col-33 {
   padding: 60px 50px;
   border-right: solid 1px #d8d8d8;
-  height: 560px;
+  height: 650px;
 }
-@media (max-width: 920px) {
+@media (max-width: 920px) and (orientation: portrait) {
   section.two.partner .col-33 {
     padding: 20px;
   }
@@ -339,7 +339,7 @@ section.two.partner .col-33 {
     padding-right: 0px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   section.two.partner .col-33 {
     padding: 20px;
     padding-bottom: 0px;
@@ -371,13 +371,13 @@ section.two.partner .col-33 p {
 section.three {
   background: #ffffff;
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   section.three .col-50 {
     width: 100%;
     background-color: #ffffff;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 480px) and (orientation: portrait) {
   section.three {
     height: 75vh;
   }
@@ -388,12 +388,12 @@ section.three.main {
 section.three.app {
   height: 768px;
 }
-@media (max-width: 920px) {
+@media (max-width: 920px) and (orientation: portrait) {
   section.three.app {
     height: 500px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   section.three.app {
     height: 100vh;
   }
@@ -401,12 +401,12 @@ section.three.app {
 section.four.main {
   height: 800px;
   background: #47555e;
-  background-image: url('../images/screen.png');
+  background-image: url('../images/screen/1.png');
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: 50%;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1920px) and (orientation: portrait) {
   section.four.main {
     background-size: 35%;
   }
@@ -415,7 +415,7 @@ section.four.main .col-50 {
   width: calc(50% - 50px);
   display: block;
 }
-@media (max-width: 480px) {
+@media (max-width: 480px) and (orientation: portrait) {
   section.four.main .col-50 {
     width: 100%;
   }
@@ -424,13 +424,13 @@ section.four.main h4,
 section.four.main p {
   margin-bottom: 30px;
 }
-@media (max-width: 480px) {
+@media (max-width: 480px) and (orientation: portrait) {
   section.four.main h4,
   section.four.main p {
     margin-bottom: 10px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 480px) and (orientation: portrait) {
   section.four.main {
     height: 100vh;
     background-position: center 78vh;
@@ -443,14 +443,13 @@ section.four.app {
   background-size: cover;
   background-position: center bottom;
 }
-@media (max-width: 920px) {
+@media (max-width: 920px) and (orientation: portrait) {
   section.four.app {
-    background-size: contain;
     background-repeat: no-repeat;
     background-color: #b5b7b7;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   section.four.app {
     height: 100vh;
   }
@@ -460,13 +459,13 @@ section.four.app .col-75 {
   margin-left: 12.5%;
   margin-top: 3%;
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   section.four.app .col-75 {
     width: calc(100% - 20px);
     margin-left: 0px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   section.four.app .col-75 {
     width: 100%;
   }
@@ -475,7 +474,7 @@ section.four.app h4 span {
   font-size: 64px;
   font-family: 'Lato-Bold';
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   section.four.app h4 span {
     font-size: 48px;
   }
@@ -490,7 +489,7 @@ section.five.main p {
   font-size: 24px;
 }
 section.five.app {
-  height: 700px;
+  height: 350px;
   background-color: #ffffff;
   background-image: url('../images/app-background-five.png');
   background-position: center top;
@@ -499,7 +498,7 @@ section.five.app {
 }
 section.five.app h3 {
   margin-bottom: 200px;
-  margin-top: 150px;
+  margin-top: 200px;
 }
 @media (max-width: 920px) {
   section.five.app h3 {
@@ -523,6 +522,11 @@ section.login {
   background: #ededed;
   min-height: calc(100vh - 226px);
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  section.login .container {
+    padding: 0px;
+  }
+}
 section.login h2 {
   margin-top: 120px;
 }
@@ -542,7 +546,7 @@ section.login h2 {
   display: table-row;
   clear: both;
 }
-@media (max-width: 480px) {
+@media (max-width: 480px) and (orientation: portrait) {
   .row {
     display: block;
   }
@@ -576,12 +580,12 @@ section.login h2 {
   font-size: 17px;
   font-family: 'Lato';
   min-width: 200px;
-  padding: 14px;
+  padding: 14px 50px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
-@media (max-width: 480px) {
+@media (max-width: 480px) and (orientation: portrait) {
   [class|="button"] {
     min-width: 160px;
     padding: 10px;
@@ -637,12 +641,12 @@ h5 .regular {
 h1 {
   font-size: 72px;
 }
-@media (max-width: 480px) {
+@media (max-width: 480px) and (orientation: portrait) {
   h1 {
     font-size: 64px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 320px) and (orientation: portrait) {
   h1 {
     font-size: 48px;
   }
@@ -650,12 +654,12 @@ h1 {
 h2 {
   font-size: 64px;
 }
-@media (max-width: 480px) {
+@media (max-width: 480px) and (orientation: portrait) {
   h2 {
     font-size: 48px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 320px) and (orientation: portrait) {
   h2 {
     font-size: 36px;
   }
@@ -663,12 +667,12 @@ h2 {
 h3 {
   font-size: 48px;
 }
-@media (max-width: 480px) {
+@media (max-width: 480px) and (orientation: portrait) {
   h3 {
     font-size: 36px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 320px) and (orientation: portrait) {
   h3 {
     font-size: 24px;
   }
@@ -676,12 +680,12 @@ h3 {
 h4 {
   font-size: 36px;
 }
-@media (max-width: 480px) {
+@media (max-width: 480px) and (orientation: portrait) {
   h4 {
     font-size: 24px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 320px) and (orientation: portrait) {
   h4 {
     font-size: 18px;
   }
@@ -696,7 +700,7 @@ p {
   margin-bottom: 30px;
   max-width: 800px;
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   p {
     font-size: 14px;
   }
@@ -797,7 +801,7 @@ a:hover {
 .apps .app-item:nth-child(7n+1) {
   margin-left: 0px;
 }
-@media (max-width: 920px) {
+@media (max-width: 920px) and (orientation: portrait) {
   .apps .app-item {
     width: 100px;
     margin-left: 20px;
@@ -810,7 +814,7 @@ a:hover {
     margin-left: 20px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   .apps .app-item {
     margin-left: 10px;
     margin-bottom: 10px;
@@ -825,7 +829,7 @@ a:hover {
     margin-left: 0px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   circle {
     height: 100%;
     display: inline-block;
@@ -835,7 +839,7 @@ a:hover {
 .circle {
   width: 100%;
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   .circle {
     height: 100%;
   }
@@ -850,12 +854,12 @@ a:hover {
   z-index: 3;
   position: relative;
 }
-@media (max-width: 920px) {
+@media (max-width: 920px) and (orientation: portrait) {
   .circle .circle-arrow {
     height: 380px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   .circle .circle-arrow {
     display: none;
   }
@@ -891,16 +895,17 @@ a:hover {
   position: absolute;
   left: 100%;
   opacity: 0;
+  width: 100%;
 }
 .circle .circle-content .circle-item.active {
-  left: 5%;
+  left: 0%;
   opacity: 1;
   transition-property: left;
   transition-duration: 1s;
   transition-timing: ease;
   transition-delay: 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   .circle .circle-content .circle-item.active {
     left: 0%;
   }
@@ -919,7 +924,7 @@ a:hover {
   margin: 50px auto;
   text-align: center;
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   .circle .circle-bullets {
     display: block;
   }
@@ -949,12 +954,12 @@ a:hover {
 .partners .partner:first-child {
   margin-left: 0px;
 }
-@media (max-width: 920px) {
+@media (max-width: 920px) and (orientation: portrait) {
   .partners .partner {
     margin-left: 60px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
   .partners .partner {
     margin-left: 20px;
     margin-bottom: 20px;
@@ -969,6 +974,17 @@ a:hover {
   padding: 35px 50px;
   margin-bottom: 60px;
   margin-left: calc(50% - 250px);
+}
+@media (max-width: 767px) and (orientation: portrait) {
+  .form {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .form {
+    padding: 30px;
+  }
 }
 .form .form-group {
   width: 100%;
@@ -1008,4 +1024,30 @@ a:hover {
 .form .form-group select:focus {
   border: solid 1px #00aeef;
   outline: none;
+}
+.form .form-group.error {
+  width: 100%;
+  padding: 20px;
+  margin: 0;
+}
+.form .form-group.error p {
+  color: #e5122c;
+  margin: 0;
+  font-size: 16px;
+  text-align: center;
+}
+.form .form-group.success {
+  width: 100%;
+  padding: 20px;
+  margin: 0;
+}
+.form .form-group.success p {
+  color: #88c642;
+  margin: 0;
+  font-size: 16px;
+  text-align: center;
+}
+.form .form-group.form-error input,
+.form .form-group.form-error select {
+  border: solid 1px #e5122c;
 }
